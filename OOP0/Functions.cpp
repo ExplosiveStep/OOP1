@@ -78,6 +78,9 @@ transport* transport::In(ifstream& ifst) {
 	case 2:
 		sp = new bus;
 		break;
+    case 3:
+        sp = new passenger_car;
+        break;
 	default:
 		return 0;
 	}
@@ -93,6 +96,11 @@ void truck::InData(ifstream& ifst) {
 // Ввод параметров автобуса из файла
 void bus::InData(ifstream& ifst) {
 	ifst >> capacity >> engine;
+}
+
+void passenger_car::InData(ifstream& ifst) {
+
+    ifst >> max_speed >> engine;
 }
 
 // Вывод параметров в файл
@@ -117,6 +125,10 @@ void truck::Out(ofstream& ofst) {
 // Вывод параметров автобуса файл
 void bus::Out(ofstream& ofst) {
     ofst << "It is bus: capacity = " << capacity << ", engine = " << engine << endl;
+}
+
+void passenger_car::Out(ofstream& ofst) {
+    ofst << "It is passenger_car: max speed = " << max_speed << ", engine = " << engine << endl;
 }
 
 int container::Getlen()
