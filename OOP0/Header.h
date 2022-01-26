@@ -18,6 +18,7 @@ public:
 class truck : public transport {
 	int cargo;//Грузоподъемность
 	int engine;//Мощность двигателя
+	int fuel_tank;//Объем топливного бака
 public:
 	void InData(ifstream& ifst);
 	void Out(ofstream& ofst);
@@ -25,12 +26,14 @@ public:
 	{
 		cargo = 0;
 		engine = 0;
+		fuel_tank = 0;
 	}
 };
 
 class bus : public transport {
 	short int capacity;//Пассажировместимость
 	int engine;//Мощность двигателя
+	int fuel_tank;//Объем топливного бака
 public:
 	void InData(ifstream& ifst);
 	void Out(ofstream& ofst);
@@ -38,6 +41,7 @@ public:
 	{
 		capacity = 0;
 		engine = 0;
+		fuel_tank = 0;
 	}
 };
 
