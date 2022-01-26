@@ -21,6 +21,7 @@ class truck : public transport {
 public:
 	void InData(ifstream& ifst);
 	void Out(ofstream& ofst);
+	double gas_mil();
 	truck()//Конструктор
 	{
 		cargo = 0;
@@ -34,6 +35,7 @@ class bus : public transport {
 public:
 	void InData(ifstream& ifst);
 	void Out(ofstream& ofst);
+	double gas_mil();
 	bus()//Конструктор
 	{
 		capacity = 0;
