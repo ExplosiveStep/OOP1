@@ -55,6 +55,7 @@ public:
 	void Out(ofstream& ofst, container*);
 	void Clear(container*);
 	int Getlen();
+	void Sort(container*);
 	container()
 	{
 		next = NULL;
