@@ -8,17 +8,10 @@ using namespace std;
 
 //Обобщение
 class transport {
-	enum key { TRUCK, BUS };
-	int k;
 public:
 	static transport* In(ifstream& ifst);
 	virtual void InData(ifstream& ifst) = 0;
 	virtual void Out(ofstream& ofst) = 0;
-	int getk();
-	transport()
-	{
-		k = -1;
-	}
 };
 
 //Грузовик
@@ -59,7 +52,6 @@ public:
 	void Out(ofstream& ofst, container*);
 	void Clear(container*);
 	int Getlen();
-	void Limited_out(container* head, ofstream& ofst);
 	container()
 	{
 		next = NULL;
