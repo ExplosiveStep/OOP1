@@ -22,6 +22,7 @@ int main(int argc, char* argv[])
 	head->In(ifst, head, tail);//Ввод содержимого контейнера из указанного потока
 	int len = head->Getlen();//Количество элементов в контейнере
 	ofst << "Filled container. " << endl;
+	head->Sort(head);
 	head->Out(ofst, head);//Вывод параметров транспорта в файл
 	head->Clear(head);//Очистка контейнера
 	ofst << "Empty container. " << endl;
