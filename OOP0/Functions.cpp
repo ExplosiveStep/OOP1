@@ -87,7 +87,8 @@ transport* transport::In(ifstream& ifst) {
         sp->k = PASSENGER_CAR;
         break;
 	default:
-		return 0;
+        cout << "Incorrect transport!" << endl;
+        exit(1);
 	}
 	sp->InData(ifst);
 	return sp;
