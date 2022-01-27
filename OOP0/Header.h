@@ -55,6 +55,7 @@ class passenger_car : public transport {
 public:
 	void InData(ifstream& ifst);
 	void Out(ofstream& ofst);
+	double gas_mil();
 	passenger_car()//Конструктор
 	{
 		max_speed = 0;

@@ -145,3 +145,8 @@ double bus::gas_mil()
 {
     return engine / 25;
 }
+
+double passenger_car::gas_mil()
+{
+    return engine / 25;
+}
