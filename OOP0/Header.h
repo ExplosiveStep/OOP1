@@ -41,6 +41,19 @@ public:
 	}
 };
 
+class passenger_car : public transport {
+	int max_speed;//Максимальная скорость
+	int engine;//Мощность двигателя
+public:
+	void InData(ifstream& ifst);
+	void Out(ofstream& ofst);
+	passenger_car()//Конструктор
+	{
+		max_speed = 0;
+		engine = 0;
+	}
+};
+
 //Контейнер
 class container {
 	container* next;
