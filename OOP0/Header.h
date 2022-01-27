@@ -6,7 +6,7 @@
 
 using namespace std;
 
-//Обобщение
+// Обобщение
 class transport {
 	enum key { TRUCK, BUS , PASSENGER_CAR};
 	int k;
@@ -16,22 +16,22 @@ public:
 	virtual void Out(ofstream& ofst) = 0;
 	virtual double gas_mil() = 0;
 	int getk();
-	transport()
+	transport()// Конструктор
 	{
 		k = -1;
 	}
 };
 
-//Грузовик
+// Грузовик
 class truck : public transport {
-	int cargo;//Грузоподъемность
-	int engine;//Мощность двигателя
-	int fuel_tank;//Объем топливного бака
+	int cargo;// Грузоподъемность
+	int engine;// Мощность двигателя
+	int fuel_tank;// Объем топливного бака
 public:
 	void InData(ifstream& ifst);
 	void Out(ofstream& ofst);
 	double gas_mil();
-	truck()//Конструктор
+	truck()// Конструктор
 	{
 		cargo = 0;
 		engine = 0;
@@ -39,15 +39,16 @@ public:
 	}
 };
 
+// Автобус
 class bus : public transport {
-	short int capacity;//Пассажировместимость
-	int engine;//Мощность двигателя
-	int fuel_tank;//Объем топливного бака
+	short int capacity;// Пассажировместимость
+	int engine;// Мощность двигателя
+	int fuel_tank;// Объем топливного бака
 public:
 	void InData(ifstream& ifst);
 	void Out(ofstream& ofst);
 	double gas_mil();
-	bus()//Конструктор
+	bus()// Конструктор
 	{
 		capacity = 0;
 		engine = 0;
@@ -55,15 +56,16 @@ public:
 	}
 };
 
+// Легковой автомобиль
 class passenger_car : public transport {
-	int max_speed;//Максимальная скорость
-	int engine;//Мощность двигателя
-	int fuel_tank;//Объем топливного бака
+	int max_speed;// Максимальная скорость
+	int engine;// Мощность двигателя
+	int fuel_tank;// Объем топливного бака
 public:
 	void InData(ifstream& ifst);
 	void Out(ofstream& ofst);
 	double gas_mil();
-	passenger_car()//Конструктор
+	passenger_car()// Конструктор
 	{
 		max_speed = 0;
 		engine = 0;
@@ -71,7 +73,7 @@ public:
 	}
 };
 
-//Контейнер
+// Контейнер
 class container {
 	container* next;
 	container* prev;
@@ -84,14 +86,14 @@ public:
 	int Getlen();
 	void Sort(container*);
 	void Limited_out(container* head, ofstream& ofst);
-	container()
+	container()// Конструктор
 	{
 		next = NULL;
 		prev = NULL;
 		cont = NULL;
 		len = 0;
 	}
-	~container()
+	~container()// Деструктор
 	{
 	}
 };

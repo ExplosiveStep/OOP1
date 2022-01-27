@@ -6,7 +6,7 @@
 
 using namespace std;
 
-//Очистка контейнера от элементов
+// Очистка контейнера от элементов
 void container::Clear(container* head) {
     int len = head->len;
     container* temp = head;
@@ -104,6 +104,7 @@ void bus::InData(ifstream& ifst) {
 	ifst >> capacity >> engine >> fuel_tank;
 }
 
+// Ввод параметров легкового автомобиля из файла
 void passenger_car::InData(ifstream& ifst) {
 
     ifst >> max_speed >> engine >> fuel_tank;
@@ -123,16 +124,17 @@ void container::Out(ofstream& ofst, container* head) {
     }
 }
 
-// Вывод параметров грузовикав файл
+// Вывод параметров грузовикав в файл
 void truck::Out(ofstream& ofst) {
     ofst << "It is truck: cargo = " << cargo << ", engine = " << engine << ",fuel_tank = " << fuel_tank << endl;
 }
 
-// Вывод параметров автобуса файл
+// Вывод параметров автобуса в файл
 void bus::Out(ofstream& ofst) {
     ofst << "It is bus: capacity = " << capacity << ", engine = " << engine << ", fuel_tank = " << fuel_tank << endl;
 }
 
+// Вывод параметров легкового автомобился в файл
 void passenger_car::Out(ofstream& ofst) {
     ofst << "It is passenger_car: max speed = " << max_speed << ", engine = " << engine << ", fuel_tank = " << fuel_tank << endl;
 }
@@ -142,6 +144,7 @@ int container::Getlen()
     return len;
 }
 
+// Метод, возвращающий параметр, который определяет сортировку
 double truck::gas_mil()
 {
     return engine / 25;
@@ -152,12 +155,12 @@ double bus::gas_mil()
     return engine / 25;
 }
 
-
 double passenger_car::gas_mil()
 {
     return engine / 25;
 }
 
+// Сортировка
 void container::Sort(container* head)
 {
     if (head->Getlen() > 1)
@@ -185,6 +188,7 @@ void container::Sort(container* head)
     }
 }
 
+// Ограниченный вывод
 void container::Limited_out(container* head, ofstream& ofst)
 {
     int len = head->len;
