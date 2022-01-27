@@ -100,7 +100,7 @@ void bus::InData(ifstream& ifst) {
 
 void passenger_car::InData(ifstream& ifst) {
 
-    ifst >> max_speed >> engine;
+    ifst >> max_speed >> engine >> fuel_tank;
 }
 
 // Âûגמה ןאנאלוענמג ג פאיכ
@@ -128,7 +128,7 @@ void bus::Out(ofstream& ofst) {
 }
 
 void passenger_car::Out(ofstream& ofst) {
-    ofst << "It is passenger_car: max speed = " << max_speed << ", engine = " << engine << endl;
+    ofst << "It is passenger_car: max speed = " << max_speed << ", engine = " << engine << ", fuel_tank = " << fuel_tank << endl;
 }
 
 int container::Getlen()

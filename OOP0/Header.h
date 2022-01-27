@@ -48,6 +48,7 @@ public:
 class passenger_car : public transport {
 	int max_speed;//Максимальная скорость
 	int engine;//Мощность двигателя
+	int fuel_tank;//Объем топливного бака
 public:
 	void InData(ifstream& ifst);
 	void Out(ofstream& ofst);
@@ -55,6 +56,7 @@ public:
 	{
 		max_speed = 0;
 		engine = 0;
+		fuel_tank = 0;
 	}
 };
 
