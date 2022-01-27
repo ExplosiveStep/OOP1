@@ -84,6 +84,7 @@ transport* transport::In(ifstream& ifst) {
 		break;
     case 3:
         sp = new passenger_car;
+        sp->k = PASSENGER_CAR;
         break;
 	default:
 		return 0;
@@ -182,7 +183,6 @@ void container::Sort(container* head)
         delete Temp;
     }
 }
-}
 
 void container::Limited_out(container* head, ofstream& ofst)
 {
@@ -195,6 +195,9 @@ void container::Limited_out(container* head, ofstream& ofst)
             temp->cont->Out(ofst);
         }
         if ((temp->cont->getk() == KEY) && (temp->cont->getk() == 1)) {
+            temp->cont->Out(ofst);
+        }
+        if ((temp->cont->getk() == KEY) && (temp->cont->getk() == 2)) {
             temp->cont->Out(ofst);
         }
         temp = temp->next;

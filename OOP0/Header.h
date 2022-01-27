@@ -8,7 +8,7 @@ using namespace std;
 
 //Обобщение
 class transport {
-	enum key { TRUCK, BUS };
+	enum key { TRUCK, BUS , PASSENGER_CAR};
 	int k;
 public:
 	static transport* In(ifstream& ifst);
