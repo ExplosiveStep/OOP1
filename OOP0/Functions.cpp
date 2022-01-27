@@ -90,12 +90,12 @@ transport* transport::In(ifstream& ifst) {
 
 // Ввод параметров грузовика из файла
 void truck::InData(ifstream& ifst) {
-	ifst >> cargo >> engine;
+	ifst >> cargo >> engine >> fuel_tank;
 }
 
 // Ввод параметров автобуса из файла
 void bus::InData(ifstream& ifst) {
-	ifst >> capacity >> engine;
+	ifst >> capacity >> engine >> fuel_tank;
 }
 
 void passenger_car::InData(ifstream& ifst) {
@@ -119,12 +119,12 @@ void container::Out(ofstream& ofst, container* head) {
 
 // Вывод параметров грузовикав файл
 void truck::Out(ofstream& ofst) {
-    ofst << "It is truck: cargo = " << cargo << ", engine = " << engine << endl;
+    ofst << "It is truck: cargo = " << cargo << ", engine = " << engine << ",fuel_tank = " << fuel_tank << endl;
 }
 
 // Вывод параметров автобуса файл
 void bus::Out(ofstream& ofst) {
-    ofst << "It is bus: capacity = " << capacity << ", engine = " << engine << endl;
+    ofst << "It is bus: capacity = " << capacity << ", engine = " << engine << ", fuel_tank = " << fuel_tank << endl;
 }
 
 void passenger_car::Out(ofstream& ofst) {
