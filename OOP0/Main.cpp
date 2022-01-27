@@ -24,6 +24,7 @@ int main(int argc, char* argv[])
 	ofst << "Filled container. " << endl;
 	head->Sort(head);
 	head->Out(ofst, head);//Вывод параметров транспорта в файл
+	//head->Limited_out(head, ofst);
 	head->Clear(head);//Очистка контейнера
 	ofst << "Empty container. " << endl;
 	cout << "Stop" << endl;

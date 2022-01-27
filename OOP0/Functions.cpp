@@ -2,6 +2,8 @@
 #include <iostream>
 #include <fstream>
 
+#define KEY 0
+
 using namespace std;
 
 //Очистка контейнера от элементов
@@ -74,9 +76,11 @@ transport* transport::In(ifstream& ifst) {
 	switch (k) {
 	case 1:
 		sp = new truck;
+        sp->k = TRUCK;
 		break;
 	case 2:
 		sp = new bus;
+        sp->k = BUS;
 		break;
     case 3:
         sp = new passenger_car;
@@ -177,4 +181,27 @@ void container::Sort(container* head)
         }
         delete Temp;
     }
+}
+}
+
+void container::Limited_out(container* head, ofstream& ofst)
+{
+    int len = head->len;
+    container* temp = head;
+
+    for (int i = 0; i < len; i++)
+    {
+        if ((temp->cont->getk() == KEY) && (temp->cont->getk() == 0)) {
+            temp->cont->Out(ofst);
+        }
+        if ((temp->cont->getk() == KEY) && (temp->cont->getk() == 1)) {
+            temp->cont->Out(ofst);
+        }
+        temp = temp->next;
+    }
+}
+
+int transport::getk()
+{
+    return k;
 }
