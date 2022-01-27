@@ -135,3 +135,13 @@ int container::Getlen()
 {
     return len;
 }
+
+double truck::gas_mil()
+{
+    return engine / 25;
+}
+
+double bus::gas_mil()
+{
+    return engine / 25;
+}

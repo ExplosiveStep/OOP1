@@ -12,6 +12,7 @@ public:
 	static transport* In(ifstream& ifst);
 	virtual void InData(ifstream& ifst) = 0;
 	virtual void Out(ofstream& ofst) = 0;
+	virtual double gas_mil() = 0;
 };
 
 //Грузовик
@@ -22,6 +23,7 @@ class truck : public transport {
 public:
 	void InData(ifstream& ifst);
 	void Out(ofstream& ofst);
+	double gas_mil();
 	truck()//Конструктор
 	{
 		cargo = 0;
@@ -37,6 +39,7 @@ class bus : public transport {
 public:
 	void InData(ifstream& ifst);
 	void Out(ofstream& ofst);
+	double gas_mil();
 	bus()//Конструктор
 	{
 		capacity = 0;
