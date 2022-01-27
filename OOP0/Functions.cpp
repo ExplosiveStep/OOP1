@@ -147,17 +147,17 @@ int container::Getlen()
 // Метод, возвращающий параметр, который определяет сортировку
 double truck::gas_mil()
 {
-    return engine / 25;
+    return engine * 2;
 }
 
 double bus::gas_mil()
 {
-    return engine / 25;
+    return engine * 2;
 }
 
 double passenger_car::gas_mil()
 {
-    return engine / 25;
+    return engine * 2;
 }
 
 // Сортировка
