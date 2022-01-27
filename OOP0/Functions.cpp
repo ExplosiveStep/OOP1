@@ -178,4 +178,3 @@ void container::Sort(container* head)
         delete Temp;
     }
 }
-}
