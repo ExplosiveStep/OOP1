@@ -31,6 +31,12 @@ public:
 	void InData(ifstream& ifst);
 	void Out(ofstream& ofst);
 	double gas_mil();
+	int Getcargo();
+	void Setcargo(int);
+	int Getengine();
+	void Setengine(int);
+	int Getfuel_tank();
+	void Setfuel_tank(int);
 	truck()// Конструктор
 	{
 		cargo = 0;
@@ -48,6 +54,12 @@ public:
 	void InData(ifstream& ifst);
 	void Out(ofstream& ofst);
 	double gas_mil();
+	short int Getcapacity();
+	void Setcapacity(short int);
+	int Getengine();
+	void Setengine(int);
+	int Getfuel_tank();
+	void Setfuel_tank(int);
 	bus()// Конструктор
 	{
 		capacity = 0;
@@ -65,6 +77,12 @@ public:
 	void InData(ifstream& ifst);
 	void Out(ofstream& ofst);
 	double gas_mil();
+	int Getmax_speed();
+	void Setmax_speed(int);
+	int Getengine();
+	void Setengine(int);
+	int Getfuel_tank();
+	void Setfuel_tank(int);
 	passenger_car()// Конструктор
 	{
 		max_speed = 0;
@@ -86,6 +104,8 @@ public:
 	int Getlen();
 	void Sort(container*);
 	void Limited_out(container* head, ofstream& ofst);
+	transport* Getcont();
+	container* Getnext();
 	container()// Конструктор
 	{
 		next = NULL;

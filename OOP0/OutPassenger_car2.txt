@@ -1,0 +1,1 @@
+It is passenger_car: max speed = 3000, engine = 140, fuel_tank = 50

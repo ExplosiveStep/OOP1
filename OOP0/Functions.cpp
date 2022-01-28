@@ -209,7 +209,100 @@ void container::Limited_out(container* head, ofstream& ofst)
     }
 }
 
+
+
+transport* container::Getcont()
+{
+    return cont;
+}
+container* container::Getnext()
+{
+    return next;
+}
+
+
 int transport::getk()
 {
     return k;
+}
+
+
+
+int truck::Getcargo()
+{
+    return cargo;
+}
+void truck::Setcargo(int a)
+{
+    cargo = a;
+}
+int truck::Getengine()
+{
+    return engine;
+}
+void truck::Setengine(int a)
+{
+    engine = a;
+}
+int truck::Getfuel_tank()
+{
+    return fuel_tank;
+}
+void truck::Setfuel_tank(int a)
+{
+    fuel_tank = a;
+}
+
+
+
+short int bus::Getcapacity()
+{
+    return capacity;
+}
+void bus::Setcapacity(short int a)
+{
+    capacity = a;
+}
+int bus::Getengine()
+{
+    return engine;
+}
+void bus::Setengine(int a)
+{
+    engine = a;
+}
+int bus::Getfuel_tank()
+{
+    return fuel_tank;
+}
+void bus::Setfuel_tank(int a)
+{
+    fuel_tank = a;
+}
+
+
+
+int passenger_car::Getmax_speed()
+{
+    return max_speed;
+}
+void passenger_car::Setmax_speed(int a)
+{
+    max_speed = a;
+}
+int passenger_car::Getengine()
+{
+    return engine;
+}
+void passenger_car::Setengine(int a)
+{
+    engine = a;
+}
+int passenger_car::Getfuel_tank()
+{
+    return fuel_tank;
+}
+void passenger_car::Setfuel_tank(int a)
+{
+    fuel_tank = a;
 }
