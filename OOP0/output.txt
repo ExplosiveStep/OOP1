@@ -1,7 +1,15 @@
 Filled container. 
-It is truck: cargo = 5000, engine = 280,fuel_tank = 60
-It is truck: cargo = 4800, engine = 265,fuel_tank = 70
-It is truck: cargo = 2300, engine = 234,fuel_tank = 30
-It is truck: cargo = 2000, engine = 190,fuel_tank = 30
-It is truck: cargo = 1400, engine = 140,fuel_tank = 50
+Container contains 12 elements.
+0: It is passenger_car: max speed = 400, engine = 500, fuel_tank = 40
+1: It is truck: cargo = 5000, engine = 280,fuel_tank = 60
+2: It is truck: cargo = 4800, engine = 265,fuel_tank = 70
+3: It is truck: cargo = 2300, engine = 234,fuel_tank = 30
+4: It is bus: capacity = 45, engine = 194, fuel_tank = 45
+5: It is truck: cargo = 2000, engine = 190,fuel_tank = 30
+6: It is bus: capacity = 35, engine = 186, fuel_tank = 35
+7: It is bus: capacity = 34, engine = 156, fuel_tank = 50
+8: It is bus: capacity = 30, engine = 150, fuel_tank = 45
+9: It is truck: cargo = 1400, engine = 140,fuel_tank = 50
+10: It is bus: capacity = 25, engine = 123, fuel_tank = 40
+11: It is passenger_car: max speed = 250, engine = 120, fuel_tank = 50
 Empty container. 
