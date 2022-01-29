@@ -428,3 +428,83 @@ void passenger_car::Setfuel_tank(int a)
 {
     fuel_tank = a;
 }
+
+
+
+// Мультиметод
+void bus::MultiMethod(transport* other, ofstream& ofst) {
+    other->MMBus(ofst);
+}
+
+// Мультиметод
+void truck::MultiMethod(transport* other, ofstream& ofst) {
+    other->MMTruck(ofst);
+}
+
+// Мультиметод
+void passenger_car::MultiMethod(transport* other, ofstream& ofst) {
+    other->MMPassenger_car(ofst);
+}
+
+// Вывод двух автобусов
+void bus::MMBus(ofstream& ofst) {
+    ofst << "Bus and Bus" << endl;
+}
+
+// Вывод грузовика и автобуса
+void bus::MMTruck(ofstream& ofst) {
+    ofst << "Truck and Bus" << endl;
+}
+
+// Вывод легкового автомобиля и автобуса
+void bus::MMPassenger_car(ofstream& ofst) {
+    ofst << "Passenger_car and Bus" << endl;
+}
+
+// Вывод автобуса и грузовика
+void truck::MMBus(ofstream& ofst) {
+    ofst << "Bus and Truck" << endl;
+}
+
+// Вывод двух грузовиков
+void truck::MMTruck(ofstream& ofst) {
+    ofst << "Truck and Truck" << endl;
+}
+
+// Вывод легкового автомобиля и грузовика
+void truck::MMPassenger_car(ofstream& ofst) {
+    ofst << "Passenger_car and Truck" << endl;
+}
+
+//Вывод автобуса и легкового автомобиля
+void passenger_car::MMBus(ofstream& ofst) {
+    ofst << "Bus and Passenger_car" << endl;
+}
+
+// Вывод грузовика и легкового автомобиля
+void passenger_car::MMTruck(ofstream& ofst) {
+    ofst << "Truck and Passenger_car" << endl;
+}
+
+// Вывод двух легковых автомобилей
+void passenger_car::MMPassenger_car(ofstream& ofst) {
+    ofst << "Passenger_car and Passenger_car" << endl;
+}
+
+// Мультиметод
+void container::MultiMethod(container* head, ofstream& ofst) {
+    container* First = head;
+    container* Second = head->next;
+    int len = head->len;
+    for (int i = 0; i < len - 1; i++) {
+
+        for (int j = i + 1; j < len; j++) {
+            First->cont->MultiMethod(Second->cont, ofst);
+            First->cont->Out(ofst);
+            Second->cont->Out(ofst);
+            Second = Second->next;
+        }
+        First = First->next;
+        Second = First->next;
+    }
+}

@@ -16,6 +16,10 @@ public:
 	virtual void InData(ifstream& ifst) = 0;
 	virtual void Out(ofstream& ofst) = 0;
 	virtual double Gas_mil() = 0;
+	virtual void MultiMethod(transport* other, ofstream& ofst) = 0;
+	virtual void MMBus(ofstream& ofst) = 0;
+	virtual void MMTruck(ofstream& ofst) = 0;
+	virtual void MMPassenger_car(ofstream& ofst) = 0;
 	int getk();
 	transport()// Конструктор
 	{
@@ -38,6 +42,10 @@ public:
 	void Setengine(int);
 	int Getfuel_tank();
 	void Setfuel_tank(int);
+	void MultiMethod(transport* other, ofstream& ofst);
+	void MMBus(ofstream& ofst);
+	void MMTruck(ofstream& ofst);
+	void MMPassenger_car(ofstream& ofst);
 	truck()// Конструктор
 	{
 		cargo = 0;
@@ -61,6 +69,10 @@ public:
 	void Setengine(int);
 	int Getfuel_tank();
 	void Setfuel_tank(int);
+	void MultiMethod(transport* other, ofstream& ofst);
+	void MMBus(ofstream& ofst);
+	void MMTruck(ofstream& ofst);
+	void MMPassenger_car(ofstream& ofst);
 	bus()// Конструктор
 	{
 		capacity = 0;
@@ -84,6 +96,10 @@ public:
 	void Setengine(int);
 	int Getfuel_tank();
 	void Setfuel_tank(int);
+	void MultiMethod(transport* other, ofstream& ofst);
+	void MMBus(ofstream& ofst);
+	void MMTruck(ofstream& ofst);
+	void MMPassenger_car(ofstream& ofst);
 	passenger_car()// Конструктор
 	{
 		max_speed = 0;
@@ -105,6 +121,7 @@ public:
 	int Getlen();
 	void Sort(container*);
 	void Limited_out(container* head, ofstream& ofst);
+	void MultiMethod(container* head, ofstream& ofst);
 	transport* Getcont();
 	container* Getnext();
 	container()// Конструктор
