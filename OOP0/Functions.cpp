@@ -245,7 +245,7 @@ void container::Out(ofstream& ofst, container* head) {
 // Вывод параметров грузовикав в файл
 void truck::Out(ofstream& ofst) {
     ofst << "It is truck: cargo = " << cargo << ", engine = " << engine
-        << ",fuel_tank = " << fuel_tank << endl;
+        << ", fuel_tank = " << fuel_tank << endl;
 }
 
 // Вывод параметров автобуса в файл
