@@ -15,7 +15,7 @@ public:
 	static transport* In(ifstream& ifst);
 	virtual void InData(ifstream& ifst) = 0;
 	virtual void Out(ofstream& ofst) = 0;
-	virtual double gas_mil() = 0;
+	virtual double Gas_mil() = 0;
 	int getk();
 	transport()// Конструктор
 	{
@@ -31,7 +31,7 @@ class truck : public transport {
 public:
 	void InData(ifstream& ifst);
 	void Out(ofstream& ofst);
-	double gas_mil();
+	double Gas_mil();
 	int Getcargo();
 	void Setcargo(int);
 	int Getengine();
@@ -54,7 +54,7 @@ class bus : public transport {
 public:
 	void InData(ifstream& ifst);
 	void Out(ofstream& ofst);
-	double gas_mil();
+	double Gas_mil();
 	short int Getcapacity();
 	void Setcapacity(short int);
 	int Getengine();
@@ -77,7 +77,7 @@ class passenger_car : public transport {
 public:
 	void InData(ifstream& ifst);
 	void Out(ofstream& ofst);
-	double gas_mil();
+	double Gas_mil();
 	int Getmax_speed();
 	void Setmax_speed(int);
 	int Getengine();
